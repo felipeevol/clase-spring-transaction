@@ -16,9 +16,11 @@ public class AddClientesService {
         this.clienteRepository = clienteRepository;
     }
 
-    //@Transactional
     public String addCliente() {
         clienteRepository.addCliente();
+        Cliente cliente = new Cliente("Roberto", "roberto@example.com");
+        entityManager.persist(cliente);
+        int a = 9/0;
         return "WORKED";
     }
 
