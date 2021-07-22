@@ -15,10 +15,10 @@ public class ClienteRepository {
         this.entityManager = entityManager;
     }
 
-    @Transactional(propagation = Propagation.NEVER)
+    @Transactional(propagation = Propagation.SUPPORTS)
     public void addCliente() {
-        //Cliente cliente = new Cliente("Miriam", "miriam@example.com");
-        //entityManager.persist(cliente);
+        Cliente cliente = new Cliente("Miriam", "miriam@example.com");
+        entityManager.persist(cliente);
     }
 
 }
