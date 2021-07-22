@@ -17,10 +17,8 @@ public class AddClientesService {
     }
 
     public String addCliente() {
-        clienteRepository.addCliente();
-        Cliente cliente = new Cliente("Roberto", "roberto@example.com");
-        entityManager.persist(cliente);
-        int a = 9/0;
+        clienteRepository.addCliente1();
+        clienteRepository.addCliente2();
         return "WORKED";
     }
 
