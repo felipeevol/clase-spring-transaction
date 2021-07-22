@@ -9,15 +9,16 @@ import javax.persistence.EntityManager;
 public class AddClientesService {
 
     private final EntityManager entityManager;
+    private final ClienteRepository clienteRepository;
 
-    public AddClientesService(EntityManager entityManager) {
+    public AddClientesService(EntityManager entityManager, ClienteRepository clienteRepository) {
         this.entityManager = entityManager;
+        this.clienteRepository = clienteRepository;
     }
 
     @Transactional
     public String addCliente() {
-        Cliente cliente = new Cliente("Felipe", "felipecm@example.com");
-        entityManager.persist(cliente);
+        clienteRepository.addCliente();
         return "WORKED";
     }
 
