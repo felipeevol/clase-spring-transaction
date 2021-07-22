@@ -16,7 +16,7 @@ public class AddClientesService {
         this.clienteRepository = clienteRepository;
     }
 
-    @Transactional
+    //@Transactional
     public String addCliente() {
         clienteRepository.addCliente();
         return "WORKED";
