@@ -15,7 +15,7 @@ public class ClienteRepository {
         this.entityManager = entityManager;
     }
 
-    @Transactional(propagation = Propagation.SUPPORTS)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public void addCliente() {
         Cliente cliente = new Cliente("Miriam", "miriam@example.com");
         entityManager.persist(cliente);
